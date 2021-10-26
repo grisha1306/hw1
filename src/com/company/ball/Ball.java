@@ -70,6 +70,6 @@ public class Ball {
 
     @Override
     public String toString() {
-        return "Ball[("+x+", "+y+"), speed=("+this.xDelta+", "+this.yDelta+")]";
+        return "Ball[("+x+", "+y+"), speed=("+xDelta+", "+yDelta+")]";
     }
 }

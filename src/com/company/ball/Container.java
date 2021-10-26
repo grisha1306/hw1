@@ -22,10 +22,10 @@ public class Container {
     }
 
     public int getWidth() {
-        return (this.x2 - this.x1 - 1);
+        return (this.x2 - this.x1 + 1);
     }
     public int getHeight() {
-        return (this.y2 - this.y1 - 1);
+        return (this.y2 - this.y1 + 1);
     }
 
     public boolean collidesWith(Ball ball)
@@ -37,34 +37,13 @@ public class Container {
 
         if (xLeft >= this.x1 && xRight <= this.x2 && yDown >= this.y2 && yUp <= this.y1)
             return true;
-        else if (xLeft >= this.x1 && xRight <= this.x2) {
-
-            if( yDown <= this.y2 )
-                ball.setY(yDown - ball.getYDelta());
-            else if ( yUp >= this.y1 )
-                ball.setY(yUp - ball.getYDelta() - ball.getRadius());
-
-            ball.reflectVertical();
-            return false;
-        }
-
-        else if (yDown >= this.y2 && yUp <= this.y1)  {
-
-            if( xLeft <= this.x1 )
-                ball.setX(xLeft + ball.getXDelta());
-            else if ( xRight >= this.x2 )
-                ball.setX(xRight - ball.getXDelta() - ball.getRadius());
-
-            ball.reflectHorizontal();
-            return false;
-        }
-
         else
             return false;
     }
 
+    @Override
     public String toString() {
-        return "Container at ("+ x1 +","+ y1 +") to ("+ x2 +", "+ y2 +")";
+        return "Container[("+ x1 +","+ y1 +") to ("+ x2 +", "+ y2 +")]";
     }
 
 }

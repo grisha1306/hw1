@@ -4,7 +4,7 @@ import com.company.ball.Ball;
 import com.company.ball.Container;
 import com.company.complex.MyComplex;
 import com.company.figures.*;
-import com.company.polynom.MyPolinomial;
+import com.company.polynom.MyPolynomial;
 import com.company.work.*;
 import com.company.library.*;
 
@@ -77,25 +77,34 @@ public class Main {
 //        myComplex.divide(right);
 //        System.out.println(myComplex.toString());
 
+//        int degree = 3;
+//        double[] coeffs1 = new double[degree + 1];
+//        for (int i = 0; i < coeffs1.length; i++) {
+//            coeffs1[i] = i;
+//        }
+//        double[] coeffs2 = new double[degree + 1];
+//        for (int i = 0; i < coeffs2.length; i++) {
+//            coeffs2[i] = i;
+//        }
 
+        double[] coeffs1 = {-10, 8 , 4, 2};
+        double[] coeffs2 = {1, 2,-9,4,-3};
+        MyPolynomial myPolynomial = new MyPolynomial(coeffs1);
+        MyPolynomial myPolynomial1 = new MyPolynomial(coeffs2);
+        System.out.println(myPolynomial.getDegree());
+        System.out.println(myPolynomial.toString());
+        System.out.println(myPolynomial1.toString());
+//        System.out.println(myPolynomial.add(myPolynomial1));
+        System.out.println(myPolynomial.multiply(myPolynomial1));
 
-//        double[] coeffs = new double[]{1.0,2.0,3.0};
-//        double[] coeffs1 = new double[]{1.0,2.0,3.0};
-//        MyPolinomial myPolinomial = new MyPolinomial(coeffs);
-//        MyPolinomial myPolinomial1 = new MyPolinomial(coeffs1);
-//        System.out.println(myPolinomial.getDegree());
-//        System.out.println(myPolinomial.toString());
-//        System.out.println(myPolinomial.add(myPolinomial1));
-//        System.out.println(myPolinomial.multiply(myPolinomial1));
-
-        Ball ball = new Ball(4.0f, -4.0f, 2, 4, 90);
-
-        Container container = new Container(0,0,10,10);
-
-        for ( int step = 0; step < 5; step++) {
-            System.out.println(container.collidesWith(ball));
-            System.out.println(ball);
-            ball.move();
-        }
+//        Ball ball = new Ball(3.0f, -3.0f, 1, 4, 0);
+//
+//        Container container = new Container(0,0,10,10);
+//
+//        for ( int step = 0; step < 10; step++) {
+//            System.out.println(container.collidesWith(ball));
+//            System.out.println(ball);
+//            ball.move();
+//        }
     }
 }
