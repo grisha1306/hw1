@@ -11,18 +11,12 @@ public class Book {
     public Book (String name, Author[] authors, double price ){
         this.name = name;
         this.price = price;
-        this.authors = new Author[] {
-                new Author("Petr", "Petr@gmail.com", 'm'),
-                new Author("Ivan", "Ivan@gmail.com", 'm')
-                };
+        this.authors = authors;
     }
 
     public Book (String name, Author[] authors, double price, int qty ){
         this.name = name;
-        this.authors = new Author[] {
-                new Author("Petr", "Petr@gmail.com", 'm'),
-                new Author("Ivan", "Ivan@gmail.com", 'm')
-        };
+        this.authors = authors;
         this.price = price;
         this.qty = qty;
     }

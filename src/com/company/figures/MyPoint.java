@@ -29,7 +29,7 @@ public class MyPoint {
     }
 
     public int[] getXY () {
-        return new int[]{this.x,this.y};
+        return new int[]{x,y};
     }
 
     public void setXY (int x, int y) {
@@ -49,8 +49,8 @@ public class MyPoint {
     }
 
     public double distance ( MyPoint another) {
-        int xDiff = this.x - another.x;
-        int yDiff = this.y - another.y;
+        int xDiff = this.x - another.getX();
+        int yDiff = this.y - another.getY();
         return Math.sqrt(Math.pow(xDiff,2) + Math.pow(yDiff,2));
     }
 

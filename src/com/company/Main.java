@@ -34,11 +34,13 @@ public class Main {
 //        System.out.println(employee.raiseSalary(3));
 //        System.out.println(employee.toString());
 
-//        Author[] authors = new Author[2];
-//        Book book = new Book("War", authors, 50.0, 1);
-//        System.out.println(book.getName());
-//        System.out.println((book.getAuthorNames()));
-//        System.out.println(Arrays.toString(book.getAuthors()));
+        Author a1 = new Author("Petr", "Petr@gmail.com", 'm');
+        Author a2 = new Author("Ivan", "Ivan@gmail.com", 'm');
+        Author[] authors = new Author[] {a1, a2};
+        Book book = new Book("War", authors, 50.0, 1);
+        System.out.println(book.getName());
+        System.out.println((book.getAuthorNames()));
+        System.out.println(Arrays.toString(book.getAuthors()));
 //        System.out.println(book.toString());
 
 //        MyPoint myPoint = new MyPoint(0,1);
@@ -52,7 +54,7 @@ public class Main {
 //        System.out.println(myPoint.distance());
 
 
-//        MyTriangle myTriangle = new MyTriangle(1,5,2,2,3,1);
+//        MyTriangle myTriangle = new MyTriangle(0,0,2,4,4,0);
 //        MyPoint v1 = new MyPoint(3,3);
 //        MyPoint v2 = new MyPoint(-3,-3);
 //        MyPoint v3 = new MyPoint(3,5);
@@ -87,15 +89,15 @@ public class Main {
 //            coeffs2[i] = i;
 //        }
 
-        double[] coeffs1 = {-10, 8 , 4, 2};
-        double[] coeffs2 = {1, 2,-9,4,-3};
-        MyPolynomial myPolynomial = new MyPolynomial(coeffs1);
-        MyPolynomial myPolynomial1 = new MyPolynomial(coeffs2);
-        System.out.println(myPolynomial.getDegree());
-        System.out.println(myPolynomial.toString());
-        System.out.println(myPolynomial1.toString());
-//        System.out.println(myPolynomial.add(myPolynomial1));
-        System.out.println(myPolynomial.multiply(myPolynomial1));
+//        double[] coeffs1 = {-10, 8 , 4, 2};
+//        double[] coeffs2 = {1, 2,-9,4,-3};
+//        MyPolynomial myPolynomial = new MyPolynomial(coeffs1);
+//        MyPolynomial myPolynomial1 = new MyPolynomial(coeffs2);
+//        System.out.println(myPolynomial.getDegree());
+//        System.out.println(myPolynomial.toString());
+//        System.out.println(myPolynomial1.toString());
+////        System.out.println(myPolynomial.add(myPolynomial1));
+//        System.out.println(myPolynomial.multiply(myPolynomial1));
 
 //        Ball ball = new Ball(3.0f, -3.0f, 1, 4, 0);
 //
